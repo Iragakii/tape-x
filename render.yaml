@@ -1,8 +1,7 @@
 services:
   - type: static
     name: tape-input-app
-    env: static
-    buildCommand: cd tape-s && npm install && npm run build
+    buildCommand: bash build.sh
     staticPublishPath: tape-s/dist
     routes:
       - path: /*
