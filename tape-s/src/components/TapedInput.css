@@ -1,0 +1,109 @@
+.tape-svg-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  min-height: 150px;
+  background: transparent;
+  padding: 0;
+  overflow: visible;
+  
+}
+
+.tape-svg {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.2));
+  transition: filter 0.3s ease;
+  display: block;
+  background: transparent;
+  padding: 0;
+  
+  overflow: visible;
+}
+
+.tape-svg:hover {
+  filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.3));
+}
+
+/* Front layer - visible tape with mask */
+.front {
+  cursor: pointer;
+}
+
+/* Back layer - rolled tape */
+.back {
+  cursor: pointer;
+}
+
+.tape-text {
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Masks */
+.maskBack,
+.maskFront,
+.maskSpecialforText {
+  pointer-events: none;
+}
+
+/* Input field - revealed after animation */
+.tape-input-field {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  max-width: 300px;
+  padding: 2px 5px;
+  border: 2px solid currentColor;
+  border-radius: 6px;
+  font-size: 14px;
+  background: white;
+  color: inherit;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  z-index: 20;
+}
+.tape-input-field:focus {
+  outline: none;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.tape-input-field::placeholder {
+  opacity: 0.5;
+}
+
+/* Color variants for input */
+.tape-input-field.text-red-600 {
+  color: #dc2626;
+  border-color: #dc2626;
+}
+
+.tape-input-field.text-yellow-300 {
+  color: #854d0e;
+  border-color: #fcd34d;
+}
+
+.tape-input-field.text-purple-400 {
+  color: #6b21a8;
+  border-color: #c084fc;
+}
+
+.tape-input-field.text-blue-900 {
+  color: #1e3a8a;
+  border-color: #1e3a8a;
+}
+
+.tape-input-field.text-green-300 {
+  color: #15803d;
+  border-color: #86efac;
+}
+
+.tape-input-field.text-blue-400 {
+  color: #1e40af;
+  border-color: #60a5fa;
+}

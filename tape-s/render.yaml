@@ -1,0 +1,9 @@
+services:
+  - type: static
+    name: tape-input-app
+    env: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    routes:
+      - path: /*
+        destination: /index.html
